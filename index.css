@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: #ededed
+}
+
+header {
+    top: 0;
+    left: 0;
+    width:100% ;
+    padding: 10px;
+    height: 10vh ;
+    background: transparent ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo{
+    font-size: 25px;
+    color:#ededed ;
+    text-decoration: none;
+    white-space: nowrap;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-weight: 600;
+    margin-left:  4% ;  
+    width: 20%;
+}
+.logo p{
+    padding-left: 30px; 
+    font-size: 23px; 
+}
+
+.navbar{
+    width: 45%;
+    display: flex;
+    justify-content:center;
+    gap:  5%;
+}
+.navbar a{
+    font-size: 18px;
+    color:#fff ;
+    text-decoration: none;
+    font-weight: 550;  
+    transition: 0.3s;
+}
+.navbar a.active,
+.navbar a:hover{  
+    color: #00abf0
+}
+
+#middle_container {
+    display: flex;
+    height:80vh ;
+    padding-top: 2px;
+    border-radius: 50px;
+
+}
+
+#left-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    overflow: auto;
+    overflow-y: auto;
+    border-radius: 50px;
+    margin-right: 10px;
+    height:90%;
+
+}
+
+#left-container.hidden {
+    display: none;
+}
+
+#left-container h2 {
+    background-color: #424040;
+    /* Background color for the left part header */
+    color: #fff;
+    padding: 7px;
+    /* Increased padding */
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 25px;
+    /* Increased font size */
+}
+
+.message-container {
+    margin-bottom: 15px;
+    /* Full width for messages */
+}
+
+
+.message {
+ padding: 10px;
+ border-radius: 15px;
+ word-wrap: break-word;
+}
+
+.warning-message {
+    background-color: #424040;
+    color: #fff;
+}
+
+.info-message {
+ background-color: #5bc0de;
+ color: #fff;
+}
+.message.warning-message+.message.warning-message {
+    margin-top: 10px;
+    /* Adjust the margin as needed */
+}
+
+#map-container {
+    flex:2;
+    margin-right:  20px;
+    border-radius: 50px;
+    overflow: auto;
+    background-color: #e6e6e6;
+    height: 100%;
+    /* Set a height for the map container */
+}
+#map-container.fullscreen {
+ flex: 1;
+ /* margin: 20px; */
+ width: 100%;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    /* Make the map fill its container */
+}
+#downward_container{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    height:20%;
+    /* border: 2px solid #000; */
+}
+
+#ota_request_message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:31%;
+    height: 40px ;
+    margin-left:8px ;
+    /* border: 2px solid #000; */
+}
+#ota_request_message.hidden{
+    display:none;
+}
+#ota_request_message_buttons_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+#ota_request_message_buttons_div button{
+    position: relative ;
+    top:5px ;
+    margin-left:10px ;
+    width:150px;
+    border:2px solid #424040;
+    border-radius: 8px ;
+    font-size: 16px;
+    color:#fff ;
+    font-weight:600 ;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow:hidden ;
+    transition: 0.5s;
+}
+#update_button{
+    background: red;
+}
+#update_button:hover{
+    background: rgba(255, 0, 0, 0.468);
+}
+#later_button{
+    background: #424040;;
+}
+#later_button:hover{
+    background: #4240406a;;
+}
+
+
+
+.btn-box {
+    position: absolute; /* Change to absolute */
+    bottom: 20px;
+    right: 20px; /* Align with the right edge */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60%; /* You can adjust the width as needed */
+    height: 50px;
+    gap: 40px;
+    /* border: 2px solid #000; */
+}
+
+
+.btn-box button{
+    position: relative ;
+    top:10px ;
+    right:30px;
+
+    display:inline-flex ;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    /* width:35% ; */
+    height:100% ;
+    background: #424040;
+    border:2px solid #424040;
+    border-radius: 8px ;
+    font-size: 18px;
+    color:#fff ;
+    font-weight:600 ;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow:hidden ;
+    transition: 0.5s;
+
+}
+
+.btn-box button:hover{
+    color: #00abf0;
+}
+
+#toggleButton{
+    width:30%;
+}
+#recenterButton{
+    width:20%;
+}
+#zoomInButton{
+    width:20%;
+}
+#zoomOutButton{
+    width:20%;
+}
+

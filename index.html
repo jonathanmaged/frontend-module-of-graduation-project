@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Location Tracker</title>
+
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<style>
+    /* Add this style to create space between warning messages */
+    
+    .message.warning-message+.message.warning-message {
+        margin-top: 10px;
+        /* Adjust the margin as needed */
+    }
+</style>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="./car_9578435.png" alt="Description of the image" width="60" height="60">
+            <p>avoid collision project</p>
+        </a>
+        <nav class="navbar">
+            <a href="#" class="active">Map</a>
+            <a href="#">warning-messages</a>
+            <a href="#">check update</a>
+        </nav>
+    </header>
+    <div id="middle_container">
+        <div id="left-container">
+            <h2>Warning Messages</h2>
+            <div id="warning-messages"></div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+    <div id="downward_container">
+        <div id="ota_request_message" class="hidden" >
+            <p>there is a new update for your system,to update</p>
+            <p>you must shut down the sytem for 10 sec </p>
+            <div id="ota_request_message_buttons_div">
+            <button id="update_button">update now</button>
+            <button id="later_button">later</button>
+            </div>
+        </div>  
+        <div class="btn-box">
+            <button id="toggleButton">show map full screen</button>
+            <button id="recenterButton">Recenter</button>
+            <button id="zoomInButton">Zoom In</button>
+            <button id="zoomOutButton">Zoom Out</button>
+        </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+    <!-- Mapbox JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+
+    <script src="Map_Handler.js"></script>
+    <script src="bottom_button_handler.js"></script>
+    <script src="Ota_Request_Handler.js"></script>
+    <script src="simulation.js"></script>
+    
+</body>
+
+</html>
